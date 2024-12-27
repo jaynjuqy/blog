@@ -1,0 +1,144 @@
+body{
+    /* background-color: rgb(56, 52, 52); */
+    background-image: url('./images/nature.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.login, .postform{
+    background-color: white;
+    display:flexbox;
+    font-size: large;
+    padding: 20px;
+    margin: 50px 0 0 450px;
+    width: 400px;
+    border-radius: 20px;
+}
+.login h1{
+    color:rgb(0,219,34);
+    text-align: center;
+}
+.login form, .postform form{
+    padding: 0 10px;
+}
+.login form label, .postform form label{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(0,219,34);
+}
+.login form input, .postform form input{
+    width: 350px;
+    height: 30px;
+    border-style: hidden hidden double hidden;
+    border-color: rgb(38, 39, 39);
+    font-size: large;
+}
+.login form button, .postform form button{
+    border:none;
+    border-radius: 10px;
+    background-color: rgb(0,219,34);
+    font-weight: bold;
+    font-size: larger;
+    padding: 10px 30px;
+    margin: 10px 0 0 120px;
+    color: white;
+}
+.login form input:focus,
+.postform form input:focus{outline:none}
+.login #p{text-align: center;}
+.sidebar{
+    height:100vh;
+    width: 22vw;
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    left:0;
+    backdrop-filter: blur(20px);
+}
+.sidebar ul {list-style-type: none;}
+.sidebar ul li {
+    margin: 1vw 1vw 1vw 0;
+    text-align: end;
+    font-size: large;
+    cursor:pointer;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(0,219,34);
+    border-radius: 5px;
+}
+.feed{
+    display: block;
+    margin: 0px 0px 0 22vw;
+    padding-inline: 4vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    right:15vw;
+    left: 0;
+    backdrop-filter: blur(20px);
+    padding-top:1.6vh;
+    overflow:auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.feed::-webkit-scrollbar {display: none; }
+.feed h1{text-align: center;}
+.feed ul{list-style-type: none;}
+.feed ul li{
+    background-color: rgba(245, 235, 235, 0.4);
+    margin-block:1.2vh;
+    padding: 0.8vh 1.6vw;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 1px 1px 10px rgb(101, 115, 245);
+}
+.feed #comment{
+    width:max-content;
+    height: max-content;
+    margin-left: 24vw;
+    position:relative;
+    top:2vh;
+    background-color: rgb(0,219,34);
+    color:white;
+    font-weight: bold;
+    border:none;
+    border-radius: 5px;
+    transition: transform .3s ease;
+}
+.feed #comment:hover{transform: scale(1.1);} 
+.postform form input{border-style: solid;}
+.pp{
+    background-color: grey;
+    border-radius: 50%;
+    width:20vw;
+    height:20vh;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.pp img{
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
+.new1{
+    display:flex;
+    justify-content: center;
+}
+.post{
+    background-color: rgba(245, 235, 235, 0.4);
+    backdrop-filter: blur(30px);
+    padding: 1.6vi;
+    border-radius: 10px;
+}

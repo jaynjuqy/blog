@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    <div class="login">
+        <h1>Registration Form</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ reg_form.non_field_errors }}
+            {{ reg_form.as_p }}
+            <button type="submit">REGISTER</button>
+        </form>
+        <p id="p">Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+    </div>
+{% endblock %}

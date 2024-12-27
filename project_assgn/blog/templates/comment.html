@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Blog about anything!
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="sidebar">
+            <ul>
+                <h2 style="color:rgb(0,219,34); text-align: center;">Welcome, {{user.username}}</h2>
+                <li><a href="{% url 'postform' %}">Post</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </div> 
+        <div class="postform">
+            <div class="post">
+                <strong>Replying to u/{{post.author}}'s post</strong>
+                <h3>{{post.title}}</h3>
+                <p>{{post.pub_date}}</p>
+            </div>
+            <p><strong>Comment about what you feel about this post!</strong></p>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">SUBMIT POST</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

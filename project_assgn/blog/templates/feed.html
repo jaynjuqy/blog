@@ -1,0 +1,35 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Personal Feed
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="sidebar">
+            <ul>
+                <h2 style="color:rgb(0,219,34); text-align: center;">Welcome, {{user.username}}</h2>
+                <li><a href="{% url 'postform' %}">Post</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </div>
+        <div class="feed">
+            <h1>For You</h1>
+            <ul>
+                {% for post in posts %}
+                    <li>
+                        <p style="color: rgb(97, 84, 59);"><strong>u/{{post.author.username}}</strong></p>
+                        <a href = "{% url 'post_details' post.id %}">
+                            <strong>{{post.title}}</strong>
+                        </a>
+                        <p>{{post.content}}</p>
+                        <div style="display:flex; height:60px;">
+                            <p style="color: rgb(97, 84, 59);">{{post.pub_date}}</p>
+                            <button id="comment" onclick="commentform({{post.id}})">comment</button>    
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
