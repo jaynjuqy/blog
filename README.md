@@ -20,8 +20,6 @@ The design prioritizes simplicity and functionality, focusing on a modular struc
 
 #### **Migrations**
 - **Initial Migration**: Sets up the database schema.
-- **Profile Migration**: Adds functionality related to user profiles.
-- **Delete Profile Migration**: Handles deletion scenarios for user profiles.
 
 #### **Static**
 - `blog.css`: Stylesheets for the application, defining layout and design.
