@@ -102,7 +102,7 @@ The design prioritizes simplicity and functionality, focusing on a modular struc
   ```bash
   python manage.py collectstatic
   ```
-- **Deployment**: The app can be deployed using platforms like Heroku or AWS. Additional configurations might be required for production.
 
-For any issues or queries, feel free to reach out through the GitHub repository’s issue tracker.
+
+
 
